@@ -1,0 +1,10 @@
+<h1>Listando livros de ...</h1>
+
+<ul>
+	<% @livros.each do |livro| %>
+		<li>
+			<%= link_to livro.nome, livro_path(livro) %>
+		</li>
+	<% end %>
+</ul>
+
