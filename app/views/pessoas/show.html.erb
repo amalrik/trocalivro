@@ -3,4 +3,5 @@
 <p><%= @pessoa.email %></p>
 
 <p><%= link_to "voltar a pagina inicial", pessoas_path %> </p>
-<p><%= link_to "deletar pessoa", pessoa_path(@pessoa), :method => :delete %> </p>
+<p><%= link_to "editar dados",            edit_pessoa_path(@pessoa) %> </p>
+<p><%= link_to "deletar pessoa",          pessoa_path(@pessoa), :method => :delete, :confirm => "apagar esse usuario, tem certeza?" %> </p>

@@ -25,4 +25,14 @@ class PessoasController < ApplicationController
 		redirect_to pessoas_path
 	end
 
+	def edit
+		@pessoa = Pessoa.find(params[:id])
+	end
+
+	def update
+		@pessoa = Pessoa.find(params[:id])
+		@pessoa.update_attributes(params[:pessoa])
+		flash[:message] = "dados do usuario '#{@pessoa.nome}' atualizados!"
+		redirect_to pessoa_path(@pessoa)
+	end
 end
