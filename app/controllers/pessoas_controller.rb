@@ -15,7 +15,7 @@ class PessoasController < ApplicationController
 		@pessoa = Pessoa.new(params[:pessoa])
 		@pessoa.save
 		flash[:message] = "Usuario '#{@pessoa.nome}' criado!"
-		redirect_to pessoa_path(@pessoa)
+		redirect_to (@pessoa)
 	end
 
 	def destroy
@@ -33,7 +33,7 @@ class PessoasController < ApplicationController
 		@pessoa = Pessoa.find(params[:id])
 		if @pessoa.update_attributes(params[:pessoa])
 			flash[:message] = "dados do usuario '#{@pessoa.nome}' atualizados!"
-			redirect_to pessoa_path(@pessoa)
+			redirect_to (@pessoa)
 		else
 			render "edit"
 		end
