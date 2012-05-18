@@ -15,7 +15,12 @@
     <%= f.text_field :edicao %>
   </p>
 
-  <p>
+	<%f.fields_for :vontades do |vontade| %>
+		<p>
+		<%= vontade.select :tipo, ([["possuo","possuo"],["quero","quero"]]) %>
+		</p>
+	<% end %>	
+	<p>
     <%= f.submit 'Save' %>
   </p>
 <% end %>

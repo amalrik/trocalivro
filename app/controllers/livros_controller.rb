@@ -10,6 +10,7 @@ class LivrosController < ApplicationController
 
 	def new
 		@livro = Livro.new
+		@vontade = Vontade.new
 	end
 
 	def create
