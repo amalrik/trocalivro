@@ -13,14 +13,6 @@
 
 ActiveRecord::Schema.define(:version => 20120421044731) do
 
-  create_table "interesse_users", :force => true do |t|
-    t.integer  "pessoa_id"
-    t.string   "tipo"
-    t.integer  "livro_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "livros", :force => true do |t|
     t.string   "nome"
     t.string   "autor"
