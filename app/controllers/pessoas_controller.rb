@@ -5,6 +5,7 @@ class PessoasController < ApplicationController
 
 	def show
 		@pessoa = Pessoa.find(params[:id])
+    @livros = @pessoa.livros
 	end
 
 	def new
